@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anime Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Anime</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anime_comments.each do |anime_comment| %>
+      <tr>
+        <td><%= anime_comment.user_id %></td>
+        <td><%= anime_comment.anime_id %></td>
+        <td><%= anime_comment.comment %></td>
+        <td><%= link_to 'Show', anime_comment %></td>
+        <td><%= link_to 'Edit', edit_anime_comment_path(anime_comment) %></td>
+        <td><%= link_to 'Destroy', anime_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anime Comment', new_anime_comment_path %>

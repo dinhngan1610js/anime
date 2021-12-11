@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @anime_comment.user_id %>
+</p>
+
+<p>
+  <strong>Anime:</strong>
+  <%= @anime_comment.anime_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @anime_comment.comment %>
+</p>
+
+<%= link_to 'Edit', edit_anime_comment_path(@anime_comment) %> |
+<%= link_to 'Back', anime_comments_path %>

@@ -31,10 +31,47 @@
 </p>
 
 <p>
+  <strong>Detail:</strong>
+  <%= @anime.detail %>
+</p>
+
+<p>
   <% if @anime.image.attached? %>
-  <%= image_tag @anime.image %>
+  <%= image_tag @anime.image, :size => "280x380" %>
   <% end %>
 </p>
+
+<h2>Comment List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Comment</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @anime.anime_comment.each do |list| %>
+        <tr>
+          <td><%= list.user.name if list.user_id %></td>
+          <td><%= list.comment %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<h2>Comment Form</h2>
+<%= form_with(model: @anime_comment, local: true) do |form| %>
+  <div class= "field">
+    <%= form.text_area :comment %>
+    <%= form.hidden_field :anime_id, :value => @anime.id %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
 
 <%= link_to 'Edit', edit_anime_path(@anime) %> |
 <%= link_to 'Back', animes_path %>

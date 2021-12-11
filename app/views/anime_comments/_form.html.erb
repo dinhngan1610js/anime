@@ -1,0 +1,32 @@
+<%= form_with(model: anime_comment) do |form| %>
+  <% if anime_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anime_comment.errors.count, "error") %> prohibited this anime_comment from being saved:</h2>
+
+      <ul>
+        <% anime_comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anime_id %>
+    <%= form.number_field :anime_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

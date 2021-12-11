@@ -8,6 +8,7 @@ class AnimesController < ApplicationController
 
   # GET /animes/1 or /animes/1.json
   def show
+    @anime_comment = AnimeComment.new
   end
 
   # GET /animes/new
@@ -64,6 +65,6 @@ class AnimesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def anime_params
-      params.require(:anime).permit(:title, :author, :producer, :release, :genre, :url, :image)
+      params.require(:anime).permit(:title, :author, :producer, :release, :genre, :url, :image, :detail)
     end
 end
