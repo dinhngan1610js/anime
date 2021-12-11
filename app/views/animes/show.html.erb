@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @anime.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @anime.author %>
+</p>
+
+<p>
+  <strong>Producer:</strong>
+  <%= @anime.producer %>
+</p>
+
+<p>
+  <strong>Release:</strong>
+  <%= @anime.release %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @anime.genre %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @anime.url %>
+</p>
+
+<p>
+  <% if @anime.image.attached? %>
+  <%= image_tag @anime.image %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_anime_path(@anime) %> |
+<%= link_to 'Back', animes_path %>
