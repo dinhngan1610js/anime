@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ .css-style {
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+.css-style:hover {
+    transform: scale(1.1);
+}
