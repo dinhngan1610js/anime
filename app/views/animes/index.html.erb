@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1 style="text-align: center;">Animes List</h1>
+
+<div class="search">
+    <%= form_tag(animes_path, method: :get) do %>
+      <%= text_field_tag :title, "", class: 'search-input' %>
+      <%= submit_tag 'Search', class: "search-icon" %>
+    <% end %>
+</div>
+
 <br>
 <br>
 
