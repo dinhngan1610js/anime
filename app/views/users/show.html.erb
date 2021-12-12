@@ -1,15 +1,26 @@
-<h1>Your Profile</h1>
+<h1> Your Profile</h1>
 
-<h3>Name</h3>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <% if @user.avatar.attached? %>
+          <%= image_tag(@user.avatar, :size => "220x300", class: "css-style") %>
+        <% end %>
+      </td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td>
+      <td>
+        <p>
+          <strong>Name:</strong>
+          <%= @user.name %>
+        </p>
 
-<%= @user.name %>
-
-<h3>Email Address</h3>
-
-<%= @user.email %>
-
-<p>
-  <% if @user.avatar.attached? %>
-    <%= image_tag(@user.avatar, :size => "280x380") %>
-  <% end %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @user.email %>
+        </p>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
