@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <div class="banner">
   <ul>
   <li><h1><%= link_to "ホームページ", root_path, class:"button1" %></h1></li>
   <% if user_signed_in? %>
@@ -23,7 +24,8 @@
   <div>
   <% end %>
 </ul>
-    <hr>
+</div>
+ 
     <%= yield %>
   </body>
 </html>
