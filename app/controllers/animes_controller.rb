@@ -1,9 +1,12 @@
 class AnimesController < ApplicationController
   before_action :set_anime, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  
+
   # GET /animes or /animes.json
   def index
-    @animes = Anime.all
+    @q = Anime.ransack(params[:q])
+    @animes = @q.result
   end
 
   # GET /animes/1 or /animes/1.json
