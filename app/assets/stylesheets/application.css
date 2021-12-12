@@ -155,15 +155,17 @@ li a:hover:not(.button) {
     }
 }
 
-.search, .search-wrapper {
+.search{
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.search-input, .search-icon {
-    padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: 1px solid #ccc;
+.search-input {
+    margin-top: 8px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
 }
