@@ -11,14 +11,18 @@
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <% if user_signed_in? %>
-        <p>Hi、<%= link_to current_user.name, users_show_path %></p>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-        <%= link_to "Sign in", new_user_session_path %>
-        <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
+  <ul>
+  <li><h1><%= link_to "ホームページ", root_path, class:"button1" %></h1></li>
+  <% if user_signed_in? %>
+      <li><h3> Hi, <%= link_to current_user.name, users_show_path, class:"button1" %><h3></li>
+      <li style="float:right"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button" %></li>
+  <% else %>
+  <div style="float:right">
+    <li><h1><%= link_to "ログイン", new_user_session_path, class: "button1" %></h1></li>
+    <li><h1><%= link_to "ユーザ登録", new_user_registration_path, class: "button1" %></h1></li>
+  <div>
+  <% end %>
+</ul>
     <hr>
     <%= yield %>
   </body>

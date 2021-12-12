@@ -21,3 +21,83 @@
 .css-style:hover {
     transform: scale(1.1);
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.button) {
+    background-color: #111;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container {
+    border-radius: 15px;
+    background-color: #f2f2f2;
+
+
+    max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.actions {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 2px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    text-align: center;
+}
+
+.actions:hover {
+    background-color: #45a049;
+}
+
+.form {
+    border-radius: 15px;
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px 2px;
+}
