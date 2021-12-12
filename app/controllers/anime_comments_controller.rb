@@ -25,7 +25,8 @@ class AnimeCommentsController < ApplicationController
     @anime_comment.user_id = current_user.id
     respond_to do |format|
       if @anime_comment.save
-        format.html { redirect_to @anime_comment, notice: "Comment was successfully created." }
+        url = "/animes/" + @anime_comment.anime_id.to_s
+        format.html { redirect_to url, notice: "Comment was successfully created." }
         format.json { render :show, status: :created, location: @anime_comment }
       else
         format.html { render :new, status: :unprocessable_entity }
