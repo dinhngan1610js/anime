@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+============================================================
 
-Things you may want to cover:
+* Ruby version : 3.0
+* SQLite3      : 3.37.0
+* Node version : 16.4.2 ( any version oke )
+* Yarn version :
+* Gem version  : 3.2.32
 
-* Ruby version
+============================================================
 
-* System dependencies
+!!! CAUTION !!!
+RUN ON YOUR LOCAL DESKTOP
+PAIZA CLOUD NOT SUPPORTED 
 
-* Configuration
+============================================================
 
-* Database creation
+* git clone https://github.com/dinhngan1610js/anime
+* cd anime
+* bundle install
+* rake db:migrate
+* rails s
+ 
+=> localhoat:3000
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+============================================================
