@@ -59,9 +59,24 @@ li a:hover:not(.button) {
     transition: 0.3s;
 }
 
+.button2 {
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
 .button-home {
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    border: solid 1px;
     padding: 20px;
     text-align: center;
     display: inline-block;
