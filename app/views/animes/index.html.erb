@@ -22,8 +22,8 @@
 
           <h3 style="text-align: center;"><%= row.title %></h3>
           <p style="text-align: center;">
-            <%= link_to 'More', row %>
-            <%= link_to 'Edit', edit_anime_path(row) %>
+            <%= link_to 'More', row %> |
+            <%= link_to 'Edit', edit_anime_path(row) %> |
             <%= link_to 'Destroy', row, method: :delete, data: { confirm: 'Are you sure?' } %>
           </p>
         </td>

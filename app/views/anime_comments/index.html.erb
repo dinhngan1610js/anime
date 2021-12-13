@@ -15,12 +15,12 @@
   <tbody>
     <% @anime_comments.each do |anime_comment| %>
       <tr>
-        <td><%= anime_comment.user_id %></td>
+        <td><%= anime_comment.user.name %></td>
         <td><%= anime_comment.anime_id %></td>
         <td><%= anime_comment.comment %></td>
-        <td><%= link_to 'Show', anime_comment %></td>
+        <td><%#= link_to 'Show', anime_comment %></td>
         <td><%= link_to 'Edit', edit_anime_comment_path(anime_comment) %></td>
-        <td><%= link_to 'Destroy', anime_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Destroy', anime_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
