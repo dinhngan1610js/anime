@@ -1,5 +1,3 @@
-<h1> Your Profile</h1>
-
 <table>
   <tbody>
     <tr>
@@ -10,16 +8,20 @@
       </td>
       <td></td><td></td><td></td><td></td><td></td><td></td><td>
       <td>
-        <p>
-          <strong>Name:</strong>
-          <%= @user.name %>
-        </p>
+      <table>
+        <thead>
+        <h1 style="font-size:3rem">Your Profile</h1>
+        </thead>
+        <tr>
+         <td><strong>Name</strong></td>
+          <td><%= @user.name %></td>
+        </tr>
 
-        <p>
-          <strong>Name:</strong>
-          <%= @user.email %>
-        </p>
-        
+        <tr>
+          <td><strong>Email address</strong></td>
+          <td><%= @user.email %></td>
+        </tr>
+        </table>
       </td>
     </tr>
   </tbody>

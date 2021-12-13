@@ -13,7 +13,7 @@ class Anime < ApplicationRecord
     private
 
     def correct_image_type
-        if image.attached? && !image.content_type.in?(%w(image/jpeg image/-png))
+        if image.attached? && !image.content_type.in?(%w(image/jpeg image/jpg image/-png))
             errors.add(:image, "must has a JPEG or PNG.")
         elsif image.attached? == false
             errors.add(:image, "must required.")

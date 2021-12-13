@@ -14,60 +14,67 @@
   <td></td><td></td><td></td><td></td><td></td><td></td><td>
 
   <td>
-    <p>
-      <strong>Title:</strong>
-      <%= @anime.title %>
-    </p>
-
-    <p>
-      <strong>Author:</strong>
-      <%= @anime.author %>
-    </p>
-
-    <p>
-      <strong>Producer:</strong>
-      <%= @anime.producer %>
-    </p>
-
-    <p>
-      <strong>Release:</strong>
-      <%= @anime.release %>
-    </p>
-
-    <p>
-      <strong>Genre:</strong>
-      <%= @anime.genre %>
-    </p>
-
-    <p>
-      <strong>Url:</strong>
-      <%= @anime.url %>
-    </p>
-
-    <p>
-      <strong>Detail:</strong>
-      <%= @anime.detail %>
-    </p>
+    <table>
+      <thead>
+      <h1 style="font-size:2rem">ANIME INFORMATION</h1>
+      </thead>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>Title</strong></td>
+        <td><%= @anime.title %></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>Author</strong></td>
+        <td><%= @anime.author %></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <td><strong>Producer</strong></td>
+        <td><%= @anime.producer %></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>Release</strong></td>
+        <td><%= @anime.release %></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>Genre</strong></td>
+        <td><%= @anime.genre %></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>URL</strong></td>
+        <td><%= @anime.url %><td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><strong>Detail</strong></td>
+        <td><%= @anime.detail %></td>
+      </tr>  
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+    </table>
   </td>
 
-  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+  <td></td><td></td><td></td><td></td><td></td>
   <td></td><td></td><td></td><td></td><td></td>
 
   <td>
     <h2><%= link_to "Comment List", anime_comments_path %></h2>
     <table>
-      <thead>
         <tr>
-          <th>User</th>
-          <th>Comment</th>
-          <th colspan="3"></th>
+          <td>User</td>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td>Comment</td>
         </tr>
-        </thead>
 
         <tbody>
           <% @anime.anime_comment.each do |list| %>
             <tr>
               <td><%= list.user.name if list.user_id %></td>
+              <td></td><td></td><td></td><td></td><td></td>
               <td><%= list.comment %></td>
             </tr>
           <% end %>
